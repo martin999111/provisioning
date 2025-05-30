@@ -18,6 +18,16 @@ PIP_PACKAGES=(
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+    "https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
+    "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+    "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/shinich39/comfyui-get-meta"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+    "https://github.com/kijai/ComfyUI-KJNodes"   
 )
 
 WORKFLOWS=(
