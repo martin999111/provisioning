@@ -11,7 +11,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    #"package-1"
+    # "insightface==0.7.3"
     #"package-2"
 )
 
@@ -21,10 +21,12 @@ NODES=(
 )
 
 WORKFLOWS=(
-
+    "https://raw.githubusercontent.com/martin999111/provisioning/refs/heads/main/SDXL_Consistent_Character_No_Lora.json"
 )
 
 CHECKPOINT_MODELS=(
+    # BIGLUST
+    "https://civitai.com/api/download/models/1081768?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/1759168?type=Model&format=SafeTensor&size=full&fp=fp16"
 )
