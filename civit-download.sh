@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration ---
-CIVITAI_API_KEY="" # Replace with your actual API Key
+CIVITAI_API_KEY="YOUR_API_KEY_HERE" # Replace with your actual API Key
 MODEL_ID=""                  # The Model ID you provided
 
 # --- Validate API Key and Model ID ---
@@ -28,7 +28,6 @@ if echo "$MODEL_DETAILS" | jq -e 'has("error")' > /dev/null; then
     exit 1
 fi
 
-# IMPORTANT CHANGE HERE: Check for "modelVersions" instead of "versions"
 if ! echo "$MODEL_DETAILS" | jq -e 'has("modelVersions") and (.modelVersions | length > 0)' > /dev/null; then
     echo "Error: Model JSON structure unexpected or no 'modelVersions' found for Model ID ${MODEL_ID}."
     echo "Full API Response received:"
@@ -38,17 +37,13 @@ fi
 
 echo "Model details fetched successfully. Attempting to locate download file."
 
-# --- Step 2: Extract the download URL and filename using a more robust jq filter ---
-# CHANGES:
-# 1. Used .modelVersions[0] instead of .versions[0]
-# 2. Used .downloadUrl attribute for the URL, not .url
-# 3. Removed metadata.fp checks as this model doesn't have them, ensuring it still works.
+# --- Step 2: Extract the download URL and filename using jq ---
 DOWNLOAD_INFO=$(echo "${MODEL_DETAILS}" | jq -r '
   .modelVersions[0] // null |                 # Get the first model version (latest), or null
   .files // [] |                             # Get all files from that version, or empty array if none
   map(select(.type == "Model")) |            # Filter for files of type "Model"
   .[0] // null |                             # Get the first (best-matched) file, or null if no Model type file
-  {url: .downloadUrl, name: .name}           # CRITICAL: Extract .downloadUrl and .name
+  {url: .downloadUrl, name: .name}           # Extract .downloadUrl and .name
 ')
 
 # Check if JQ found a suitable file
@@ -72,7 +67,17 @@ fi
 echo "Found download URL: ${DOWNLOAD_URL}"
 echo "Downloading to: ${OUTPUT_FILENAME}"
 
-# --- Step 3: Use wget to download the file ---
-wget --content-disposition "$DOWNLOAD_URL" -O "$OUTPUT_FILENAME"
+# --- Step 3: Use curl to download the file ---
+# CRITICAL CHANGE: Using curl for download
+curl -L \
+  -H "Authorization: Bearer ${CIVITAI_API_KEY}" \
+  "$DOWNLOAD_URL" \
+  -o "$OUTPUT_FILENAME"
+
+# Check curl's exit status
+if [ $? -ne 0 ]; then
+    echo "Error: curl download failed."
+    exit 1
+fi
 
 echo "Download complete."
