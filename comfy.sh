@@ -3,6 +3,10 @@
 source /venv/main/bin/activate
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
+
+
+wget -P "${WORKSPACE}/" https://synapse.b-cdn.net/checkpoints/bigLust_v16.safetensors
+
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
