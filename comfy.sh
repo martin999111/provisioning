@@ -3,9 +3,10 @@
 source /venv/main/bin/activate
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
+# Script to wokspace folder
 
-
-wget -P "${WORKSPACE}/" https://fsn1.your-objectstorage.com/sf-models/checkpoints/bigLust_v16.safetensors
+wget -P "${WORKSPACE}/" https://raw.githubusercontent.com/martin999111/provisioning/refs/heads/main/models.sh
+chmod +x "${WORKSPACE}/"models.sh
 
 # Packages are installed after nodes so we can fix them...
 
