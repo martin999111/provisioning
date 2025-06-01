@@ -11,23 +11,23 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    "insightface==0.7.3"#
+    #"insightface==0.7.3"#
     #"package-2"
 )
 
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
-    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
-    "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
-    "https://github.com/chrisgoringe/cg-use-everywhere"
-    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
-    "https://github.com/yolain/ComfyUI-Easy-Use"
-    "https://github.com/shinich39/comfyui-get-meta"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
-    "https://github.com/kijai/ComfyUI-KJNodes"   
+    #"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+    #"https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
+    #"https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+    #"https://github.com/chrisgoringe/cg-use-everywhere"
+    #"https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    #"https://github.com/yolain/ComfyUI-Easy-Use"
+    #"https://github.com/shinich39/comfyui-get-meta"
+    #"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    #"https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+    #"https://github.com/kijai/ComfyUI-KJNodes"   
 )
 
 WORKFLOWS=(
@@ -36,8 +36,8 @@ WORKFLOWS=(
 
 CHECKPOINT_MODELS=(
     # BIGLUST
-    "https://fsn1.your-objectstorage.com/sf-models/checkpoints/bigLust_v16.safetensors"
-    "https://fsn1.your-objectstorage.com/sf-models/checkpoints/realismEngineSDXL_v30VAE.safetensors"
+    #"https://fsn1.your-objectstorage.com/sf-models/checkpoints/bigLust_v16.safetensors"
+    #"https://fsn1.your-objectstorage.com/sf-models/checkpoints/realismEngineSDXL_v30VAE.safetensors"
     #"https://civitai.com/api/download/models/1081768?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/1759168?type=Model&format=SafeTensor&size=full&fp=fp16"
