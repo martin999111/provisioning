@@ -5,7 +5,7 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 
 
-wget -P "${WORKSPACE}/" https://synapse.b-cdn.net/checkpoints/bigLust_v16.safetensors
+wget -P "${WORKSPACE}/" https://fsn1.your-objectstorage.com/sf-models/checkpoints/bigLust_v16.safetensors
 
 # Packages are installed after nodes so we can fix them...
 
