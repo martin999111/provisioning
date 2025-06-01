@@ -36,8 +36,8 @@ WORKFLOWS=(
 
 CHECKPOINT_MODELS=(
     # BIGLUST
-    https://fsn1.your-objectstorage.com/fs-models/checkpoints/bigLust_v16.safetensors
-    https://fsn1.your-objectstorage.com/fs-models/checkpoints/realismEngineSDXL_v30VAE.safetensors
+    https://fsn1.your-objectstorage.com/sf-models/checkpoints/bigLust_v16.safetensors
+    https://fsn1.your-objectstorage.com/sf-models/checkpoints/realismEngineSDXL_v30VAE.safetensors
     #"https://civitai.com/api/download/models/1081768?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
     #"https://civitai.com/api/download/models/1759168?type=Model&format=SafeTensor&size=full&fp=fp16"
