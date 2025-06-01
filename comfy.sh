@@ -11,7 +11,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    "insightface==0.7.3"
+    #"insightface==0.7.3"#
     #"package-2"
 )
 
@@ -31,7 +31,7 @@ NODES=(
 )
 
 WORKFLOWS=(
-    "https://raw.githubusercontent.com/martin999111/provisioning/refs/heads/main/SDXL_Consistent_Character_No_Lora.json"
+    #"https://raw.githubusercontent.com/martin999111/provisioning/refs/heads/main/SDXL_Consistent_Character_No_Lora.json"#
 )
 
 CHECKPOINT_MODELS=(
