@@ -11,7 +11,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    # "insightface==0.7.3"
+    "insightface==0.7.3"
     #"package-2"
 )
 
